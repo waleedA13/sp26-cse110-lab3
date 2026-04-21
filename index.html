@@ -2,54 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Meeting minutes for Team High Five">
-    <title>Team High Five Meeting Minutes</title>
+    <title>Team Akatsuki Meeting Minutes</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS with <style> (required for lab) -->
+    <style>
+        details summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: hsl(220, 60%, 45%);
+            padding: 0.4em 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Kickoff Meeting</h1>
-        <h2>Topic: Team Setup, Branding, and Contract</h2>
-        <h3>Date: 04/08/2026</h3>
-        
-        <nav>
-            <ul>
-                <li><a href="#attendance">Attendance</a></li>
-                <li><a href="#agenda">Agenda</a></li>
-                <li><a href="#business">Business & Discussions</a></li>
-                <li><a href="#media">Media</a></li>
-                <li><a href="#feedback">Feedback Form</a></li>
+    <header class="site-header">
+        <div class="header-content">
+            <h1 class="meeting-title">Kickoff Meeting</h1>
+            <h2 class="meeting-subtitle">Topic: AI Slot Machine, Planning, Assigning Roles</h2>
+            <p class="meeting-date" data-type="date">Date: 04/17/2026</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#attendance" class="nav-link">Attendance</a></li>
+                <li class="nav-item"><a href="#agenda" class="nav-link">Agenda</a></li>
+                <li class="nav-item"><a href="#business" class="nav-link">Business</a></li>
+                <li class="nav-item"><a href="#media" class="nav-link">Media</a></li>
+                <li class="nav-item"><a href="#feedback" class="nav-link">Feedback</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="attendance">
-            <h2>Attendance List</h2>
-            <p><strong>Time:</strong> 9:30pm - 10:50pm | <strong>Location:</strong> zoom meeting</p>
-            <h3>Present:</h3>
-            <ul>
-                <li>Patrick</li>
-                <li>Ava</li>
-                <li>Nick</li>
-                <li>Lisa</li>
-                <li>Hanwen</li>
-                <li>Pranav</li>
-                <li>Zay</li>
-                <li>Jaylen</li>
-                <li>Jayden</li>
-                <li>Waleed</li>
-                <li>Nikolas</li>
-            </ul>
-            <h3>Absent:</h3>
-            <p>None</p>
+    <main class="main-content">
+        <section id="attendance" class="section">
+            <h2 class="section-heading">Attendance List</h2>
+            <p class="meeting-info"><strong>Time:</strong> 9:30pm - 10:50pm | <strong>Location:</strong> Zoom meeting</p>
+
+            <div class="attendance-grid">
+                <div class="attendance-col">
+                    <h3>Present:</h3>
+                    <ul class="member-list">
+                        <li>Aditya</li>
+                        <li>Hemendra</li>
+                        <li>Alexis</li>
+                        <li>Daniel</li>
+                        <li>Hieu</li>
+                        <li>James</li>
+                        <li>Jason</li>
+                        <li>Woosik</li>
+                        <li>Waleed</li>
+                    </ul>
+                </div>
+                <div class="attendance-col">
+                    <h3>Absent:</h3>
+                    <li>Fahad</li>
+                </div>
+                <div class="attendance-col">
+                    <h3>Meeting Details:</h3>
+                    <p><strong>Duration:</strong> 1hr 20min</p>
+                    <p><strong>Format:</strong> In person (Geisal Library)</p>
+                    <p><strong>Next Meeting:</strong> 04/15/2026</p>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <hr class="divider">
 
-        <section id="agenda">
-            <h2>Agenda</h2>
-            <ol>
+        <section id="agenda" class="section">
+            <h2 class="section-heading">Agenda</h2>
+            <ol class="agenda-list">
                 <li>Github Repo setup</li>
                 <li>Finalize a weekly meeting, meeting notes, responsibility division</li>
                 <li>Branding: team name, logo, team page, and video</li>
@@ -57,107 +85,133 @@
             </ol>
         </section>
 
-        <section id="business">
-            <h2>Business & Discussions</h2>
-            
-            <div>
-                <h3>Unfinished Business</h3>
-                <p>N/A - This is our first kickoff meeting, so there is no unfinished business from a previous meeting.</p>
-            </div>
-            
-            <div>
-                <h3>New Business</h3>
-                <p><strong>Decisions Made:</strong></p>
-                <ul>
-                    <li>High Five will be our group name</li>
-                    <li>All communication will be on Slack. All members have Slack notifications on.</li>
-                    <li>Our weekly meetings will be on Tuesdays at 8:30pm. If a back up meeting is required it will be on Sunday at 10am.</li>
-                </ul>
+        <section id="business" class="section">
+            <h2 class="section-heading">Business &amp; Discussions</h2>
 
-                <p><strong>Action Plans & Next Steps:</strong></p>
-                <ul>
-                    <li>Film the intro video. Everyone gets a few seconds of intro. The team will meet tomorrow after class to shoot the video.</li>
-                    <li>Sign and finalize the Team Contract.</li>
-                    <li>Add your own bios in github markdown.</li>
-                    <li>Figure out the goal / theme of our project.</li>
-                </ul>
-                
-                <details>
-                    <summary>Miscellaneous Comments / Concerns</summary>
-                    <p><span>Note:</span> Team members may feel shy or uncomfortable to address problems or weaknesses. Suggest hosting 1:1 meetings with team leaders if uncomfortable to post in the main Slack chat.</p>
-                </details>
+            <div class="business-flex">
+                <div class="card unfinished-card">
+                    <h3 class="card-title">Unfinished Business</h3>
+                    <p>N/A &mdash; This is our first kickoff meeting, so there is no unfinished business from a previous meeting.</p>
+                </div>
+
+                <div class="card new-card">
+                    <h3 class="card-title">New Business</h3>
+                    <p><strong>Decisions Made:</strong></p>
+                    <ul>
+                        <li>Akatsuki will be our group name</li>
+                        <li>All communication will be on Slack. All members have Slack notifications on.</li>
+                        <li>Our weekly meetings will be on Friday at 2:00pm. If a backup meeting is required it will be on Sunday at 10am.</li>
+                    </ul>
+                </div>
+
+                <div class="card action-card">
+                    <h3 class="card-title">Action Plans &amp; Next Steps</h3>
+                    <ul>
+                        <li>Film the intro video. Everyone gets a few seconds of intro. The team will meet tomorrow after class to shoot the video.</li>
+                        <li>Sign and finalize the Team Contract.</li>
+                        <li>Add your own bios in GitHub Markdown.</li>
+                        <li>Figure out the goal / theme of our project.</li>
+                    </ul>
+                </div>
             </div>
+
+            <details class="misc-details">
+                <summary>Miscellaneous Comments / Concerns</summary>
+                <p><span class="highlight-note">Note:</span> Team members may feel shy or uncomfortable to address problems or weaknesses. Suggest hosting 1:1 meetings with team leaders if uncomfortable to post in the main Slack chat.</p>
+            </details>
         </section>
 
-        <section id="media">
-            <h2>Meeting Media</h2>
-            
+        <section id="media" class="section">
+            <h2 class="section-heading">Meeting Media</h2>
+
             <h3>Diagrams</h3>
-            <img src="logoideas.jpg" alt="Whiteboard diagram of team branding ideas" width="300">
+            <!-- Inline CSS example (required for lab) -->
+            <img src="logoideas.jpg" alt="Whiteboard diagram of team branding ideas" style="border: 3px solid #555; border-radius: 8px;" class="media-img">
 
             <h3>Recordings</h3>
-            <p>Audio Recording:</p>
-            <audio controls>
-                <source src="kickoff_audio.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-
-            <p>Video Recording:</p>
-            <video controls width="400">
-                <source src="kickoff_video.mp4" type="video/mp4">
-                Your browser does not support the video element.
-            </video>
+            <div class="media-row">
+                <div class="media-item">
+                    <p>Audio Recording:</p>
+                    <audio controls>
+                        <source src="kickoff_audio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="media-item">
+                    <p>Video Recording:</p>
+                    <video controls width="400">
+                        <source src="kickoff_video.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+            </div>
         </section>
     </main>
 
-    <hr>
+    <hr class="divider">
 
-    <footer>
-        <section id="feedback">
-            <h2>Meeting Feedback Form</h2>
-            <form action="#" method="get">
+    <footer class="site-footer">
+        <section id="feedback" class="section">
+            <h2 class="section-heading">Meeting Feedback Form</h2>
+            <form action="#" method="get" class="feedback-form">
                 <fieldset>
                     <legend>Feedback Details</legend>
 
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name"><br><br>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </div>
 
-                    <label for="meeting-date">Date of meeting:</label>
-                    <input type="date" id="meeting-date" name="meeting-date"><br><br>
+                    <div class="form-group">
+                        <label for="meeting-date">Date of meeting:</label>
+                        <input type="date" id="meeting-date" name="meeting-date">
+                    </div>
 
-                    <p>Was the meeting productive?</p>
-                    <input type="radio" id="yes" name="productive" value="yes">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="productive" value="no">
-                    <label for="no">No</label><br><br>
+                    <div class="form-group">
+                        <p>Was the meeting productive?</p>
+                        <div class="radio-group">
+                            <input type="radio" id="yes" name="productive" value="yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" id="no" name="productive" value="no">
+                            <label for="no">No</label>
+                        </div>
+                    </div>
 
-                    <input type="checkbox" id="followup" name="followup" value="yes">
-                    <label for="followup">I need a follow-up meeting</label><br><br>
+                    <div class="form-group">
+                        <input type="checkbox" id="followup" name="followup" value="yes">
+                        <label for="followup">I need a follow-up meeting</label>
+                    </div>
 
-                    <label for="role">Your Role:</label>
-                    <input list="roles" id="role" name="role">
-                    <datalist id="roles">
-                        <option value="Frontend">
-                        <option value="Backend">
-                        <option value="Design">
-                        <option value="Testing">
-                    </datalist><br><br>
+                    <div class="form-group">
+                        <label for="role">Your Role:</label>
+                        <input list="roles" id="role" name="role" placeholder="Select or type">
+                        <datalist id="roles">
+                            <option value="Frontend">
+                            <option value="Backend">
+                            <option value="Design">
+                            <option value="Testing">
+                        </datalist>
+                    </div>
 
-                    <label for="rating">Meeting Rating:</label>
-                    <select id="rating" name="rating">
-                        <option value="excellent">Excellent</option>
-                        <option value="good">Good</option>
-                        <option value="needs-improvement">Needs Improvement</option>
-                    </select><br><br>
+                    <div class="form-group">
+                        <label for="rating">Meeting Rating:</label>
+                        <select id="rating" name="rating">
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="needs-improvement">Needs Improvement</option>
+                        </select>
+                    </div>
 
-                    <label for="comments">Additional Comments:</label><br>
-                    <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br><br>
+                    <div class="form-group">
+                        <label for="comments">Additional Comments:</label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+                    </div>
 
-                    <button type="button">Submit Feedback</button>
+                    <button type="button" class="submit-btn">Submit Feedback</button>
                 </fieldset>
             </form>
         </section>
-        <p>&copy; 2026 Team High Five. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Team Akatsuki. All rights reserved.</p>
     </footer>
 </body>
 </html>

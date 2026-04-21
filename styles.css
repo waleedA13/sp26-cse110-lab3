@@ -1,0 +1,506 @@
+/* ============================================================
+   Team High Five – Meeting Minutes Stylesheet
+   CSE 110 Lab 3
+   ============================================================ */
+
+/* --- CSS Variables & Fallbacks --- */
+:root {
+    --primary-color: hsl(220, 60%, 45%);
+    --primary-light: hsl(220, 60%, 92%);
+    --accent-color: rgb(230, 126, 34);
+    --text-color: #2c3e50;
+    --text-light: rgba(44, 62, 80, 0.7);
+    --bg-color: #f8f9fa;
+    --card-bg: #FFFFFF;
+    --border-color: hsl(220, 13%, 85%);
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --radius: 8px;
+    --gap: 1.25rem;
+
+    /* Wider-gamut colors */
+    --wide-accent: color(display-p3 0.9 0.45 0.1);
+    --mixed-highlight: color-mix(in srgb, hsl(220, 60%, 45%) 60%, orange 40%);
+}
+
+/* --- Universal Selector --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Element Selector (body) --- */
+body {
+    font-family: var(--font-body, Arial, sans-serif);  /* CSS variable with fallback */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    min-width: 280px;
+}
+
+/* --- Element Selector (headings, paragraph) --- */
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+/* --- Class Selector --- */
+.site-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    margin-bottom: 1rem;
+}
+
+/* --- Combining Two Selectors (element.class) --- */
+h1.meeting-title {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+.meeting-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 0.3rem;
+    opacity: 0.9;
+}
+
+/* --- Attribute Selector --- */
+[data-type="date"] {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    opacity: 0.85;
+}
+
+/* --- Nav with Flexbox --- */
+.main-nav {
+    margin-top: 0.5rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.nav-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 0.4em 1em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+/* --- Pseudo-class Selector :hover --- */
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* --- Pseudo-class Selector :active --- */
+.nav-link:active {
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(0);
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+.main-content {
+    max-width: 960px;
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+/* --- ID Selector --- */
+#attendance {
+    margin-bottom: 1.5rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.meeting-info {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* ============================================================
+   ATTENDANCE – CSS Grid Layout
+   ============================================================ */
+
+.attendance-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: var(--gap);
+    align-items: start;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    background-color: var(--card-bg);
+}
+
+.attendance-col h3 {
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+}
+
+/* --- Descendant Combinator --- */
+.member-list li {
+    padding: 0.2em 0;
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.divider {
+    border-style: solid;
+    border-color: var(--border-color);
+    border-width: 1px 0 0 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 960px;
+}
+
+/* ============================================================
+   AGENDA
+   ============================================================ */
+
+.agenda-list {
+    padding-left: 1.5em;
+}
+
+/* --- Child Combinator --- */
+.agenda-list > li {
+    padding: 0.35em 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+/* ============================================================
+   BUSINESS & DISCUSSIONS – Flexbox Layout
+   ============================================================ */
+
+.business-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: stretch;
+}
+
+.card {
+    flex: 1 1 280px;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.2s;
+}
+
+/* --- :has() Selector (new in 2023) --- */
+.card:has(.card-title) {
+    border-left: 4px solid var(--primary-color);
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.6em;
+    color: var(--primary-color);
+}
+
+.card ul {
+    padding-left: 1.2em;
+}
+
+.card li {
+    padding: 0.2em 0;
+}
+
+/* --- General Sibling Combinator --- */
+.unfinished-card ~ .action-card {
+    border-left-color: var(--accent-color);
+}
+
+/* --- Adjacent Sibling Combinator --- */
+.unfinished-card + .new-card {
+    border-left-color: var(--mixed-highlight);
+}
+
+.misc-details {
+    margin: 1rem 0 0 0;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: hsla(220, 60%, 92%, 0.85);
+    border-radius: var(--radius);
+}
+
+.highlight-note {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* ============================================================
+   MEDIA SECTION
+   ============================================================ */
+
+.media-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.media-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.media-item {
+    flex: 1 1 300px;
+}
+
+.media-item audio,
+.media-item video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================================
+   FOOTER & FORM
+   ============================================================ */
+
+.site-footer {
+    background-color: var(--card-bg);
+    border-top: 2px solid var(--border-color);
+    padding: 2rem 5%;
+}
+
+/* --- Nested Selectors (adopted 2023) --- */
+.feedback-form {
+    max-width: 600px;
+    margin: auto;
+
+    fieldset {
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+    }
+
+    legend {
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 0 0.5em;
+        color: var(--primary-color);
+    }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[list],
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5em 0.75em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    margin-top: 0.2em;
+}
+
+.form-group textarea {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+/* --- Selector List --- */
+.radio-group label, .form-group > label {
+    cursor: pointer;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background-color: hsl(220, 60%, 35%);
+}
+
+.submit-btn:active {
+    background-color: hsl(220, 60%, 28%);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   DISPLAY PROPERTY EXAMPLES
+   ============================================================ */
+
+/* display: none – hide absent section when empty */
+#attendance .attendance-col:last-child p:empty {
+    display: none;
+}
+
+/* display: inline-block – used on .nav-link above */
+
+/* display: block – used on .submit-btn, .media-img above */
+
+/* ============================================================
+   POSITION EXAMPLES
+   ============================================================ */
+
+/* position: sticky – used on .site-header above */
+
+/* position: relative – for details disclosure icon */
+.misc-details {
+    position: relative;
+}
+
+/* ============================================================
+   UNITS REFERENCE
+   ============================================================
+   Relative units used:
+     rem  – font sizes, padding, margins throughout
+     em   – list padding, card spacing
+     %    – widths (.main-content width: 90%, .divider width: 90%)
+
+   Absolute units used:
+     px   – border-width, specific margins, media-img border
+     pt   – (used below)
+     cm   – (used below)
+   ============================================================ */
+
+/* Absolute unit examples (pt, cm) */
+.meeting-title {
+    letter-spacing: 0.5pt;
+}
+
+.attendance-grid {
+    min-height: 1cm;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN – Media Queries
+   ============================================================ */
+
+/* Phones */
+@media (max-width: 600px) {
+    .site-header {
+        padding: 1rem 4%;
+    }
+
+    h1.meeting-title {
+        font-size: 1.4rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .attendance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-flex {
+        flex-direction: column;
+    }
+
+    .media-row {
+        flex-direction: column;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-content {
+        width: 92%;
+    }
+
+    .attendance-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1025px) {
+    .main-content {
+        max-width: 1000px;
+    }
+}
