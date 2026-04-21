@@ -7,7 +7,7 @@
 
 ## Description
 This repository contains the deliverables for Lab 3. It includes:
-* `index.html`: Meeting minutes for Team High Five, now styled with CSS.
+* `index.html`: Meeting minutes for Team Akatsuki, now styled with CSS.
 * `styles.css`: External CSS stylesheet with comprehensive styling.
 * `standup.md`: Standup notes template for Agile workflow.
 * `screenshots/`: Contains CSS validation screenshot.
