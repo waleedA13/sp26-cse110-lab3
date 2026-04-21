@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Meeting minutes for Team High Five">
+    <title>Team High Five Meeting Minutes</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Kickoff Meeting</h1>
+        <h2>Topic: Team Setup, Branding, and Contract</h2>
+        <h3>Date: 04/08/2026</h3>
+        
+        <nav>
+            <ul>
+                <li><a href="#attendance">Attendance</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#business">Business & Discussions</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#feedback">Feedback Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="attendance">
+            <h2>Attendance List</h2>
+            <p><strong>Time:</strong> 9:30pm - 10:50pm | <strong>Location:</strong> zoom meeting</p>
+            <h3>Present:</h3>
+            <ul>
+                <li>Patrick</li>
+                <li>Ava</li>
+                <li>Nick</li>
+                <li>Lisa</li>
+                <li>Hanwen</li>
+                <li>Pranav</li>
+                <li>Zay</li>
+                <li>Jaylen</li>
+                <li>Jayden</li>
+                <li>Waleed</li>
+                <li>Nikolas</li>
+            </ul>
+            <h3>Absent:</h3>
+            <p>None</p>
+        </section>
+
+        <hr>
+
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <ol>
+                <li>Github Repo setup</li>
+                <li>Finalize a weekly meeting, meeting notes, responsibility division</li>
+                <li>Branding: team name, logo, team page, and video</li>
+                <li>Team Contract</li>
+            </ol>
+        </section>
+
+        <section id="business">
+            <h2>Business & Discussions</h2>
+            
+            <div>
+                <h3>Unfinished Business</h3>
+                <p>N/A - This is our first kickoff meeting, so there is no unfinished business from a previous meeting.</p>
+            </div>
+            
+            <div>
+                <h3>New Business</h3>
+                <p><strong>Decisions Made:</strong></p>
+                <ul>
+                    <li>High Five will be our group name</li>
+                    <li>All communication will be on Slack. All members have Slack notifications on.</li>
+                    <li>Our weekly meetings will be on Tuesdays at 8:30pm. If a back up meeting is required it will be on Sunday at 10am.</li>
+                </ul>
+
+                <p><strong>Action Plans & Next Steps:</strong></p>
+                <ul>
+                    <li>Film the intro video. Everyone gets a few seconds of intro. The team will meet tomorrow after class to shoot the video.</li>
+                    <li>Sign and finalize the Team Contract.</li>
+                    <li>Add your own bios in github markdown.</li>
+                    <li>Figure out the goal / theme of our project.</li>
+                </ul>
+                
+                <details>
+                    <summary>Miscellaneous Comments / Concerns</summary>
+                    <p><span>Note:</span> Team members may feel shy or uncomfortable to address problems or weaknesses. Suggest hosting 1:1 meetings with team leaders if uncomfortable to post in the main Slack chat.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Meeting Media</h2>
+            
+            <h3>Diagrams</h3>
+            <img src="logoideas.jpg" alt="Whiteboard diagram of team branding ideas" width="300">
+
+            <h3>Recordings</h3>
+            <p>Audio Recording:</p>
+            <audio controls>
+                <source src="kickoff_audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>Video Recording:</p>
+            <video controls width="400">
+                <source src="kickoff_video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <section id="feedback">
+            <h2>Meeting Feedback Form</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Feedback Details</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="meeting-date">Date of meeting:</label>
+                    <input type="date" id="meeting-date" name="meeting-date"><br><br>
+
+                    <p>Was the meeting productive?</p>
+                    <input type="radio" id="yes" name="productive" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="productive" value="no">
+                    <label for="no">No</label><br><br>
+
+                    <input type="checkbox" id="followup" name="followup" value="yes">
+                    <label for="followup">I need a follow-up meeting</label><br><br>
+
+                    <label for="role">Your Role:</label>
+                    <input list="roles" id="role" name="role">
+                    <datalist id="roles">
+                        <option value="Frontend">
+                        <option value="Backend">
+                        <option value="Design">
+                        <option value="Testing">
+                    </datalist><br><br>
+
+                    <label for="rating">Meeting Rating:</label>
+                    <select id="rating" name="rating">
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="needs-improvement">Needs Improvement</option>
+                    </select><br><br>
+
+                    <label for="comments">Additional Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br><br>
+
+                    <button type="button">Submit Feedback</button>
+                </fieldset>
+            </form>
+        </section>
+        <p>&copy; 2026 Team High Five. All rights reserved.</p>
+    </footer>
+</body>
+</html>
