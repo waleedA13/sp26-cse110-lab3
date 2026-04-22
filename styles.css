@@ -270,7 +270,10 @@ h1.meeting-title {
     flex: 1 1 300px;
 }
 
-.media-item audio,
+.media-item audio {
+    width: 100%;
+}
+
 .media-item video {
     max-width: 100%;
     height: auto;
