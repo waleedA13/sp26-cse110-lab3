@@ -4,7 +4,6 @@
 
 ## Published Site
 [My Published Site](https://waleedA13.github.io/110_Lab_3)
-
 ## Description
 This repository contains the deliverables for Lab 3. It includes:
 * `index.html`: Meeting minutes for Team Akatsuki, now styled with CSS.
